@@ -5,6 +5,13 @@
     </div>
   </div>
 </template>
+<script lang="ts">
+  import Vue from 'vue'
+
+  export default class Labels extends Vue {
+
+  }
+</script>
 <style lang="scss">
   @import "@/assets/styles/vars";
   h1 {
