@@ -1,19 +1,14 @@
 <template>
   <div id="app">
-    <router-view/>
-    <div id="bottom">
-      <Icon/>
-      <Nav/>
-    </div>
+    <Home/>
   </div>
 </template>
 
 <script lang="ts">
-  import Nav from "./components/Nav.vue"
-  import Icon from "./components/Icon.vue"
+  import Home from '@/views/Home.vue'
 
   export default {
-    components: {Nav, Icon}
+    components: {Home}
   }
 </script>
 
