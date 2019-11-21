@@ -1,32 +1,35 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
+    <div id="bottom">
+      <Icon/>
+      <Nav/>
+    </div>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+  import Nav from "./components/Nav.vue"
+  import Icon from "./components/Icon.vue"
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  export default {
+    components: {Nav, Icon}
   }
-}
+</script>
+
+<style scoped lang="scss">
+  @import "assets/styles/reset";
+  @import "assets/styles/vars";
+  #app {
+    font-family: $font-hei;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  #bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 </style>
