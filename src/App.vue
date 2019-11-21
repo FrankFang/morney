@@ -2,24 +2,25 @@
   <div id="app">
     <router-view/>
     <div id="bottom">
-      <Icon/>
       <Nav/>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-  import Nav from "./components/Nav.vue"
-  import Icon from "./components/Icon.vue"
+  import Nav from '@/components/Nav.vue'
 
   export default {
-    components: {Nav, Icon}
+    components: {Nav}
   }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   @import "assets/styles/reset";
   @import "assets/styles/vars";
+  * {box-sizing: border-box;}
+  *::before, *::after {box-sizing: border-box}
+  a {text-decoration: none; color: inherit;}
   #app {
     font-family: $font-hei;
     font-size: 16px;

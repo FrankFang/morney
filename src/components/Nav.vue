@@ -1,11 +1,49 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link>
-    |
-    <router-link to="/about">About</router-link>
+    <router-link class="item" to="/">
+      <Icon name="label"/>
+      <p>标签</p>
+    </router-link>
+    <router-link class="item" to="/about">
+      <Icon name="money"/>
+      <p>记账</p>
+    </router-link>
+    <router-link class="item" to="/about">
+      <Icon name="chart"/>
+      <p>统计</p>
+    </router-link>
   </nav>
 </template>
 <script lang="ts">
+  import Component from 'vue-class-component'
+  import Vue from 'vue'
+  import Icon from '@/components/Icon.vue'
 
+  @Component({
+    props: {},
+    components: {Icon}
+  })
+  export default class Nav extends Vue {
+
+  }
 </script>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+  @import "~@/assets/styles/vars";
+  nav {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0 3px $shadow;
+    .item {
+      padding: 4px 0;
+      width: 33.33333%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 12px;
+      svg {width: 32px; height: 32px;}
+      p {margin: 4px 0;}
+
+    }
+  }
+</style>
