@@ -32,7 +32,6 @@
   }
 </script>
 <style scoped lang="scss">
-  //noinspection CssUnknownTarget
   @import "~@/assets/styles/vars";
   nav {
     display: flex;
